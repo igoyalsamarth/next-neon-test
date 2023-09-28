@@ -25,6 +25,7 @@ export default async function Page () {
               src='/zoro.jpeg'
               className='border-[10px] border-white shadow-2xl'
               width={500} height={300}
+              alt=''
             />
           </div>
           <section className='w-1/2 text-center leading-9 sm:w-[80%]'>
