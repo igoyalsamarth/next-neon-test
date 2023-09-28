@@ -14,10 +14,10 @@ export default function Page(){
                 <div className="flex flex-col p-10 justify-center items-center gap-5">
                     <p className="font-bold text-xl">Contact me:</p>
                     <div className="flex w-full justify-center gap-2 items-center">
-                    <Image src='/mail.svg' height={24} width={24} className="" /><p>roronoazoro@3swords.com</p>
+                    <Image src='/mail.svg' height={24} width={24} className="" alt="" /><p>roronoazoro@3swords.com</p>
                     </div>
                     <div className="flex w-full justify-center gap-2 items-center">
-                    <Image src='/linkedin.svg' height={18} width={18} className="" /><p>Roronoa Zoro</p>
+                    <Image src='/linkedin.svg' height={18} width={18} className="" alt="" /><p>Roronoa Zoro</p>
                     </div>
                 </div>
                 <p className="font-bold text-sm py-5">OR</p>
