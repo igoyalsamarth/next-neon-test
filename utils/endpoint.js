@@ -1,1 +1,1 @@
-export const endpoint = process.env.VERCEL_URL
+export const endpoint = 'zoro-seo.vercel.app'
