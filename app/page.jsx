@@ -11,7 +11,6 @@ export const metadata = {
 
 export default async function Page () {
   const data = await getAllBlogs()
-
   return (
     <div className='flex flex-col pt-[70px] items-center'>
       <div className='flex flex-col w-[900px] justify-center gap-5 md:w-[700px] sm:w-[95vw] items-center'>

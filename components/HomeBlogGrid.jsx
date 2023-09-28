@@ -12,7 +12,7 @@ export default function HomeBlogGrid(props){
       })
     return(
         <div className={`grid grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 w-full justify-items-center gap-10 duration-[1500ms] ${inView? 'mt-0 opacity-100':'-mt-40 opacity-0'}`} ref={ref}>
-            {props.data.slice(0,6).map(item => {
+            {props.data?.slice(0,6).map(item => {
                 return(
                 <div className="flex flex-col pb-2" key={item.id}>
                 <Link href={`/blog/${item.id}`} className={`flex flex-col mb-5 group`} >

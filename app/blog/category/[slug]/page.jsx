@@ -9,7 +9,6 @@ export async function generateMetadata ({ params }) {
     title: `${params.slug.replace(/-/g, ' ').toUpperCase()} Archives - Shubham Agarwal`,
   }
 }
-
 export default async function Page ({ params }) {
     const blogs = await getBlogsFromCategory(params.slug)
     return (
