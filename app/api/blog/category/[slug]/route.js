@@ -5,6 +5,7 @@ export async function GET(request, {params}) {
   let tags;
   try {
     tags = await db.unsafe(`SELECT * FROM blogs WHERE topic_tag ILIKE '${params.slug.replace(/-/g, ' ').toLowerCase()}'`);
+    console.log(tags)
   } catch (error) {
     return NextResponse.json({ error });
   }
