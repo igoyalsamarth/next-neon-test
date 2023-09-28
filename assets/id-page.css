@@ -1,0 +1,9 @@
+.item:hover .plus{
+    opacity: 0%;
+    margin-top: 0%;
+    margin-left: 20%;
+}
+.item:hover .read_more{
+    opacity: 100%;
+    transition-duration: 200ms;
+}
