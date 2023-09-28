@@ -1,1 +1,1 @@
-export const endpoint = VERCEL_URL
+export const endpoint = process.env.VERCEL_URL
