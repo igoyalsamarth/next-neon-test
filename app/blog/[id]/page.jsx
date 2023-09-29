@@ -9,13 +9,6 @@ import Recommend from '@/components/Recommend'
 import Socials from '@/components/Socials'
 import dayjs from 'dayjs'
 
-export const dynamicParams = false
-
-export async function generateStaticParams () {
-  const blogs = await getAllBlogs()
-  return blogs.map(blog => ({ id: blog.id.toString() }))
-}
-
 export async function generateMetadata ({ params }) {
   const blogs = await getAllBlogs()
   const data = blogs.filter(item => item.id.toString() === params.id)
