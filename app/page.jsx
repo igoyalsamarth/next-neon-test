@@ -3,6 +3,7 @@ import HomeBlogGrid from '@/components/HomeBlogGrid'
 import Socials from '@/components/Socials'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 export const metadata = {
   title: 'Link Building & SEO With Shubham Agarwal',
@@ -113,7 +114,9 @@ export default async function Page () {
             <br />
             Check the blog
           </p>
+          <Suspense fallback={<></>} >
           <HomeBlogGrid data={data}/>
+          </Suspense>
           <div className='flex gap-8'>
             <Socials />
           </div>
