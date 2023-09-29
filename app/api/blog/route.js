@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 import db from '@/lib/db'
  
-export async function GET() {
+export const revalidate = 1;
+
+export async function GET(request) {
   let tags;
   try {
     tags = await db.unsafe(`SELECT * FROM blogs`);
