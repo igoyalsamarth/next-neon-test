@@ -3,6 +3,7 @@ import HomeBlogGrid from '@/components/HomeBlogGrid'
 import Socials from '@/components/Socials'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 export const metadata = {
   title: 'Link Building & SEO With Shubham Agarwal',
@@ -12,6 +13,7 @@ export const metadata = {
 export default async function Page () {
   const data = await getAllBlogs()
   return (
+    <Suspense callback = {<></>} >
     <div className='flex flex-col pt-[70px] items-center'>
       <div className='flex flex-col w-[900px] justify-center gap-5 md:w-[700px] sm:w-[95vw] items-center'>
         <p className='text-[85px] lg:text-[60px] font-bold text-center leading-[85px] lg:leading-[60px] md:text-[60px] md:leading-[60px] sm:text-[50px] sm:leading-[50px]'>
@@ -120,5 +122,6 @@ export default async function Page () {
         </div>
       </div>
     </div>
+    </Suspense>
   )
 }
