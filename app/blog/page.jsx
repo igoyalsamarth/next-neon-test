@@ -12,7 +12,6 @@ export const metadata = {
 export default async function Page(){
     const data = await getAllBlogs()
     return(
-        <Suspense fallback={<></>} >
         <div className="w-full flex justify-center items-center py-20">
         <div className="grid grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 w-[90%] gap-10 justify-items-center">
             {data?.map(item => {
@@ -32,6 +31,5 @@ export default async function Page(){
             })}
         </div>
         </div>
-        </Suspense>
     )
 }
