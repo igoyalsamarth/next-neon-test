@@ -14,7 +14,7 @@ export default async function Page ({ params }) {
     return (
         <div className="flex w-full justify-center align-middle py-10">
         <div className="grid grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 w-[70%] sm:w-[80%] mt-10 justify-items-center gap-6">
-            {blogs?.data.map(item => {
+            {blogs?.map(item => {
                 return(
                     <div className="flex flex-col shadow justify-between" key={item.id}>
                     <Link href={`/blog/${item.id}`} className="flex flex-col w-full group">

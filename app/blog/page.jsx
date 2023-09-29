@@ -13,7 +13,7 @@ export default async function Page(){
     return(
         <div className="w-full flex justify-center items-center py-20">
         <div className="grid grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 w-[90%] gap-10 justify-items-center">
-            {data?.data?.map(item => {
+            {data?.map(item => {
                 return(
                     <div className="flex flex-col" key={item.id}>
                 <Link href={`/blog/${item.id}`} className="flex flex-col group" >

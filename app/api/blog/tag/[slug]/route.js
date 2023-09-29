@@ -6,7 +6,7 @@ export async function GET(request, {params}) {
   try {
     tags = await db.unsafe(`SELECT * FROM blogs WHERE tag_one ILIKE '${params.slug.replace(/-/g, ' ').toLowerCase()}' OR tag_two ILIKE '${params.slug.replace(/-/g, ' ').toLowerCase()}' OR tag_three ILIKE '${params.slug.replace(/-/g, ' ').toLowerCase()}'`);
   } catch (error) {
-    return NextResponse.json({ error });
+    return new NextResponse.json({ error });
   }
-  return NextResponse.json({ data: tags });
+  return new NextResponse(JSON.stringify(tags));
 }

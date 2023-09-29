@@ -11,6 +11,7 @@ export default function HomeBlogGrid(props){
     rootMargin: '-50px 0px',
       })
     return(
+        
         <div className={`grid grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 w-full justify-items-center gap-10 duration-[1500ms] ${inView? 'mt-0 opacity-100':'-mt-40 opacity-0'}`} ref={ref}>
             {props.data?.slice(0,6).map(item => {
                 return(

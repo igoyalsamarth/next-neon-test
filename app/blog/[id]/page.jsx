@@ -9,16 +9,9 @@ import Recommend from '@/components/Recommend'
 import Socials from '@/components/Socials'
 import dayjs from 'dayjs'
 
-export const dynamicParams = false
-
-export async function generateStaticParams () {
-  const blogs = await getAllBlogs()
-  return blogs.data.map(blog => ({ id: blog.id.toString() }))
-}
-
 export async function generateMetadata ({ params }) {
   const blogs = await getAllBlogs()
-  const data = blogs.data.filter(item => item.id.toString() === params.id)
+  const data = blogs.filter(item => item.id.toString() === params.id)
   return {
     title: data[0].blog_name,
   }
@@ -32,7 +25,7 @@ export async function convertHTML (blog_body) {
 
 export default async function Page ({ params }) {
   const blogs = await getAllBlogs()
-  const data = blogs.data.filter(item => item.id.toString() === params.id)
+  const data = await blogs.filter(item => item.id.toString() === params.id)
   const contentHtml = await convertHTML(data[0].blog_body)
   return (
     <div className='flex flex-col w-full justify-center items-center'>
@@ -98,7 +91,7 @@ export default async function Page ({ params }) {
           </div>
         </div>
       </div>
-      <Recommend data={blogs.data} currentId={params.id} />
+      <Recommend data={blogs} currentId={params.id} />
       <div className='flex gap-8 py-10 items-center justify-center'>
         <Socials />
       </div>

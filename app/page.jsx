@@ -113,7 +113,7 @@ export default async function Page () {
             <br />
             Check the blog
           </p>
-          <HomeBlogGrid data={data.data}/>
+          <HomeBlogGrid data={data}/>
           <div className='flex gap-8'>
             <Socials />
           </div>
