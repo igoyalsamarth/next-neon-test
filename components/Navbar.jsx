@@ -3,20 +3,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Suspense } from 'react'
 
 export default function Navbar() {
   const pathname = usePathname()
 
   return (
     <header className='flex sticky top-0 justify-center border-b-2 border-[#e9e9e9] bg-[#ffffff] drop-shadow-md z-[100]'>
-      <Suspense fallback={
-        <div className='flex py-8 justify-center items-center w-[900px] md:w-[700px] sm:w-[95vw] sm:flex-col sm:gap-[15px] sm:py-4'>
-          <div className="fixed inset-0 z-50 flex items-center justify-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-zinc-900" />
-          </div>
-        </div>
-      }>
         <div className='flex py-8 justify-between items-center w-[900px] md:w-[700px] sm:w-[95vw] sm:flex-col sm:gap-[15px] sm:py-4'>
           <Image src='/next.svg' alt='' height={70} width={80} />
           <div className='flex gap-12 items-center text-sm font-extrabold sm:gap-[40px]'>
@@ -28,7 +20,6 @@ export default function Navbar() {
             <Link href='/contact' className='py-3 px-5 rounded-full bg-[#2325bf] text-white'>LET'S TALK</Link>
           </div>
         </div>
-      </Suspense>
     </header>
   )
 }
