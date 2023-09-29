@@ -1,14 +1,12 @@
 import { NextResponse } from 'next/server';
 import db from '@/lib/db'
  
-export const revalidate = 30;
-
-export async function GET(request, {params}) {
-  let blogs;
+export async function GET() {
+  let tags;
   try {
-    blogs = await db.unsafe(`SELECT * FROM blogs`)
+    tags = await db.unsafe(`SELECT * FROM blogs`);
   } catch (error) {
     return new NextResponse.json({ error });
   }
-  return new NextResponse(JSON.stringify(blogs));
+  return new NextResponse(JSON.stringify(tags));
 }
