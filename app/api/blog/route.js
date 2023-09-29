@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 import db from '@/lib/db'
  
-export async function GET(request) {
+export const revalidate = 30;
+
+export async function GET(request, {params}) {
   let blogs;
   try {
     blogs = await db.unsafe(`SELECT * FROM blogs`)
