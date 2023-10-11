@@ -5,8 +5,8 @@ import { getAllBlogs } from '@/lib/blogs'
 import { Suspense } from "react"
 
 export const metadata = {
-    title: 'Blog - Shubham Agarwal',
-    description: 'Blog - Shubham Agarwal',
+    title: 'Blog - Roronoa Zoro',
+    description: 'Blog - Roronoa Zoro',
   }
 
 export default async function Page(){

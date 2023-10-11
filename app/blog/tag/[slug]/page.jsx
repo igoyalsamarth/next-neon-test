@@ -6,7 +6,7 @@ import '@/assets/id-page.css'
 
 export async function generateMetadata ({ params }) {
   return {
-    title: `${params.slug.replace(/-/g, ' ').toUpperCase()} Archives - Shubham Agarwal`,
+    title: `${params.slug.replace(/-/g, ' ').toUpperCase()} Archives - Roronoa Zoro`,
   }
 }
 

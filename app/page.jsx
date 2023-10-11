@@ -5,8 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Link Building & SEO With Shubham Agarwal',
-  description: 'Link Building & SEO With Shubham Agarwal',
+  title: 'Link Building & SEO With Roronoa Zoro',
+  description: 'Link Building & SEO With Roronoa Zoro',
 }
 
 export default async function Page () {

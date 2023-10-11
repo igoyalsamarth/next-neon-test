@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 export default async function Recommend (props) {
+  console.log('in recommended')
   const randoms = []
   while (randoms.length <= 3) {
     const x = Math.floor(Math.random() * props.data.length) + 1
@@ -8,6 +9,7 @@ export default async function Recommend (props) {
       randoms.push(x)
     }
   }
+  console.log(props)
   return (
     <div className='flex flex-col w-[900px] justify-center items-center my-3 md:w-[700px] sm:w-[95vw]'>
       <p className='text-lg font-bold py-5'>What you can read next</p>

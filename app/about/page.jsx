@@ -3,8 +3,8 @@ import Socials from '@/components/Socials'
 import Image from 'next/image'
 
 export const metadata = {
-  title: 'About - Shubham Agarwal',
-  description: 'About - Shubham Agarwal',
+  title: 'About - Roronoa Zoro',
+  description: 'About - Roronoa Zoro',
 }
  
 

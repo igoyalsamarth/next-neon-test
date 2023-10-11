@@ -2,8 +2,8 @@ import Socials from "@/components/Socials";
 import Image from "next/image";
 
 export const metadata = {
-    title: 'Contact - Shubham Agarwal',
-    description: 'Contact - Shubham Agarwal',
+    title: 'Contact - Roronoa Zoro',
+    description: 'Contact - Roronoa Zoro',
   }
 
 export default function Page(){
